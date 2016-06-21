@@ -1,6 +1,8 @@
 import test from 'ava';
-import convert-to-camelcase from './dist'
+import convertToCamelcase from './dist'
 
-test(t => {
-    t.deepEqual([1, 2], [1, 2]);
+test('converts string with dashes', t => {
+    t.deepEqual(convertToCamelcase("the-really-cool-app"), 'theReallyCoolApp');
 });
+
+test.todo('converts string with spaces')
